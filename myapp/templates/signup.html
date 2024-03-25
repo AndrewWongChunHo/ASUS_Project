@@ -1,0 +1,61 @@
+{% include 'include/css.html' %}
+{% include 'include/js.html' %}
+{% include 'include/nav.html' %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+
+<body>
+    <section class="formContainer register">
+        {% load widget_tweaks %}
+        {% block content %}
+        <div class="center">
+            <h1>Register</h1>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.non_fields_errors }}
+                <div class="textWrapper_register">
+                    <h6>Username</h6>
+                    <label for="{{ form.username.id_for_label }}"></label>
+                    {{ form.username | add_class:"form-control" }}
+                    {{ form.username.errors }}
+                </div>
+                <div class="textWrapper_register">
+                    <h6>Email</h6>
+                    <label for="{{ form.email.id_for_label }}"></label>
+                    {{ form.email | add_class:"form-control" }}
+                    {{ form.email.errors }}
+                </div>
+                <div class="textWrapper_register">
+                    <h6>Password</h6>
+                    <label for="{{ form.password1.id_for_label }}"></label>
+                    {{ form.password1 | add_class:"form-control" }}
+                    {{ form.password1.errors }}
+                </div>
+                <div class="textWrapper_register">
+                    <h6>Confirm Password</h6>
+                    <label for="{{ form.password2.id_for_label }}"></label>
+                    {{ form.password2 | add_class:"form-control" }}
+                    {{ form.password2.errors }}
+                </div>
+                <input type="submit" class="signup_button" value="Register">
+                <div class="login-link">
+                    Is a member? <a href="/login/">Login</a>
+                </div>
+            </form>
+            {% endblock content %}
+    </section>
+    {% include 'include/footer.html' %}
+</body>
+
+
+</html>

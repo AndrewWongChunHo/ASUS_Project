@@ -1,0 +1,313 @@
+
+/* Product section */
+.text-anim{
+    width: 100%;
+    height: 90vh;
+    background: #000;
+    position: relative;
+    display: flex;
+    padding: 0px 20px;
+    white-space: nowrap;
+}
+
+.anim{
+    position: absolute;
+    color: white;
+    font-size: 80px;
+    letter-spacing: 2px;
+    margin-left: 400px;
+    line-height: 60vh;
+    z-index: 2;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.anim2{
+    position: absolute;
+    color: white;
+    font-size: 80px;
+    letter-spacing: 2px;
+    margin-left: 600px;
+    line-height: 90vh;
+    z-index: 2;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
+
+.splitting .char {
+    transition: transform 0.6s cubic-bezier(.6,0,0,.6);
+    transition-delay: calc( 0.3s * ( 1 - var(--distance-percent)) );
+    transition-delay: calc( 0.3s * var(--distance-percent) );
+    white-space: nowrap;
+  }
+
+.char:hover{
+    color: #00C9B1;
+    transform: rotateX(-1turn);
+    transition-duration: 1s;
+    transition-delay: calc( 0.3s * var(--distance-percent) );
+    transition-delay: calc( 0.3s * ( 1 - var(--distance-percent)) );
+    white-space: nowrap;
+}
+
+
+/* title */
+.products{
+    width: 100%;
+    height: 170vh;
+    z-index: 1;
+    background-attachment: fixed;
+}
+
+.product-text{
+    margin-left: 600px;
+    margin-top: 30px;
+    width: 320px;
+    position: relative;
+}
+
+.product-text:before{
+    content: "";
+    display: block;
+    width: 120px;
+    height: 2px;
+    background: red;
+    position: absolute;
+    left: -130px;
+    top: 50%;
+    white-space: nowrap;
+}
+
+.product-text:after{
+    content: "";
+    display: block;
+    width: 120px;
+    height: 2px;
+    background: red;
+    position: absolute;
+    right: -130px;
+    top: 50%;
+    white-space: nowrap;
+}
+
+/* display products */
+
+
+.card{
+    left: 8%;
+}
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 350px;
+    gap: 1em;
+    white-space: nowrap;
+}
+
+/* product animation */
+.imgBx{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+    transform-origin: right;
+}
+
+.card:hover img{
+    transform: scale(1.5);
+}
+
+.action{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.action li{
+    position: relative;
+    list-style: none;
+    width: 30px;
+    height: 30px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+    cursor: pointer;
+    transform: translateX(60px);
+}
+
+.card:hover .action li{
+    transform: translateX(0px);
+}
+
+.action li span{
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%) translateX(-20px);
+    white-space: nowrap;
+    padding: 4px 15px;
+    background: white;
+    color: #333;
+    font-weight: 500;
+    font-style: 13px;
+    border-radius: 4px;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.action li:hover{
+    background: #00C9B1;
+    transition: 0.5s;
+}
+
+.action li:hover span{
+    transform: translateY(-50%) translateX(0px);
+    opacity: 1;
+}
+
+
+
+
+/* card effect */
+.card-anim{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 80vh;
+    background-image: url(https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80);
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+.ui-card{
+    width: 350px;
+    background: radial-gradient(#111 50%, #000 100%);
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+}
+
+.ui-card img{
+    transform: scale(1.3);
+    transition: all 0.3s ease-out;
+}
+
+.ui-card:hover img{
+    transform: scale(1.1) translateY(-20px);
+    opacity: 0.3;
+
+}
+
+.description{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+}
+
+.description h3{
+   font-weight: 700;
+   font-size: 32px;
+   margin: 0 0 10px;
+   opacity: 0;
+   transition: all 0.3s ease-out;
+}
+
+.p-container{
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    margin-top: 10px;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+
+.ui-card:hover .description h3{
+    transform: translateY(-30px);
+    opacity: 1;
+}
+
+.ui-card:hover .p-container{
+    transform: translateY(-30px);
+    opacity: 1;
+}
+
+.section-three{
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.section-three img{
+    width: 650px;
+    height: 650px;
+    position: absolute;
+    margin-top: 4em;
+}
+
+.section-three a{
+    position: absolute;
+    margin-top: 140px;
+    margin-left: -330px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.three-text{
+    margin-top: 60px;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+
+@media screen and (max-width:768px){
+
+    .anim, .anim2{
+        display: none;
+    }
+
+    .product-text{
+        margin-left: 40px;
+        border-bottom: 4px solid red;
+    }
+
+    .product-text:before, .product-text:after{
+        display: none;
+    }
+
+    .ui-card{
+        width: 200px;
+    }
+
+
+}
+
+
+
+

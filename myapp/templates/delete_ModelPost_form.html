@@ -1,0 +1,32 @@
+{% include 'include/css.html' %}
+{% include 'include/js.html' %}
+{% include 'include/nav.html' %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+{% load widget_tweaks %}
+{% block content %}
+<section class="section delete">
+
+    <div class="flex-container">
+        <div class="delete-container">
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ form.non_fields_errors }}
+                <div class="fieldWrapper">
+                    <h3 class="delete-text">Are you sure you want to delete?</h1>
+                </div>
+                <br>
+                <div class="button-container">
+                    <button type="submit" class="delete-btn"> DELETE </button>
+                    <button type="submit" class="cancel-list-btn"> <a href="/list/">CANCEL</a></button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</section>
+{% endblock content %}
+
+{% include 'include/footer.html' %}

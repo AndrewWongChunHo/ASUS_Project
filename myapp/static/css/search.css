@@ -1,0 +1,118 @@
+.searchText h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-weight: 600;
+    font-size: 50px;
+}
+
+.searchText h1:before {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 2px;
+    background: red;
+    position: absolute;
+    left: 35%;
+    top: 20%;
+    white-space: nowrap;
+}
+
+.searchText h1:after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 2px;
+    background: red;
+    position: absolute;
+    right: 35%;
+    top: 20%;
+    white-space: nowrap;
+}
+.bar-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#mysearch {
+    position: relative;
+    width: 54%;
+    font-size: 20px;
+    padding: 10px;
+    border: 2px solid rgb(0, 0, 0);
+    margin-bottom: 20px;
+    white-space: nowrap;
+}
+
+#productTable {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+#productTable th,
+#productTable td {
+    text-align: left;
+    padding: 15px;
+}
+
+#productTable tr {
+    border-bottom: 1px solid #ddd;
+}
+
+#productTable tr.product,
+#productTable tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+#dropdown,
+#dropdown2,
+#dropdown3,
+#dropdown4,
+#dropdown5,
+#dropdown6 #dropdown7,
+#dropdown8,
+#dropdown9 #dropdown10,
+#dropdown11,
+#dropdown12 {
+    display: none;
+}
+
+.dropdown img {
+    width: 350px;
+    height: 250px;
+    display: block;
+    margin-left: 70px;
+    margin-top: -5px;
+    border-radius: 10px;
+    box-shadow: 0px 9px 11px 5px rgba(0, 0, 0, 0.1);
+}
+
+#dropdownleft {
+    width: 30%;
+    height: 300px;
+    padding-top: 20px;
+}
+
+#dropdownright {
+    border-top: 1px solid #0e0d0d;
+    border-bottom: 1px solid #080808;
+    width: 70%;
+    height: 300px;
+    padding-bottom: 10px;
+}
+
+#dropdownright h1 {
+    margin-top: 20px;
+}
+
+#dropdownright ul li {
+    margin-top: 5px;
+}
+
+#dropdownright ul li span {
+    font-weight: bold;
+}

@@ -1,0 +1,303 @@
+{% include 'include/css.html' %}
+{% include 'include/js.html' %}
+{% include 'include/nav.html' %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/search.css' %}">
+<link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+<link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+<script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+<!DOCTYPE html>
+<html>
+
+<title>Search</title>
+
+<body>
+    <section class="search" style="height: 100vh;">
+        <div class="searchText">
+            <h1>Search</h1>
+        </div>
+        <div class="bar-container">
+            <input type="text" id="mysearch" onkeyup="myFunction()" placeholder="Search">
+        </div>
+        <table id="productTable">
+            <tr class="product-type" style="background: rgb(128, 224, 216);">
+                <th style="width:70%;">Product</th>
+                <th style="width:15%;">Type</th>
+                <th style="width:15%;">Price</th>
+            </tr>
+            <tr id="porductdate" onclick="show()" style="text-align: center;">
+                <td>ROG Delta S Animate</td>
+                <td>Headphone</td>
+                <td>$1,900</td>
+            </tr>
+            <div id="dropdown" class="dropdown">
+                <div id="dropdownleft" style="float: left;">
+                    <img src="{%static 'images/search1.jpg' %}">
+                </div>
+                <div id="dropdownright" style="float: right;">
+                    <h1>ROG Delta S Animate</h1>
+                    <ul>
+                        <li>- Customizable AniMe Matrix™ displays and Soundwave light effects let you shine in style.
+                        </li>
+                        <li>- Industry-leading hi-fi ESS 9281 Quad DAC™, plus MQA support for impeccably detailed audio.
+                        </li>
+                        <li>- ASUS Essence drivers and airtight chamber technology for immersive sound.</li>
+                        <li>- ASUS AI Noise-Canceling Microphone offers crystal-clear in-game voice communication.</li>
+                        <li>- Comfortable and lightweight 310-gram design with ergonomic, fast-cooling D-shaped ear
+                            cushions for a perfect fit.</li>
+                        <li>- USB-C® connector for compatibility with PCs, Macs, PlayStation®, Nintendo Switch™ and
+                            mobile devices.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <tr id="porductdate2" onclick="show2()" style="text-align: center;">
+                <td>ROG Strix Flare II Animate Keyboard</td>
+                <td>Keyboard</td>
+                <td>$1,799</td>
+            </tr>
+            <div id="dropdown2" class="dropdown">
+                <div id="dropdownleft" style="float: left;">
+                    <img src="{%static 'images/search2.webp' %}">
+                </div>
+                <div id="dropdownright" style="float: right;">
+                    <h1>ROG Strix Flare II Animate Keyboard</h1>
+                    <ul>
+                        <li>- <span>AniMe Matrix™ LED display:</span> Personalize and express yourself in a unique way
+                            with customizable images and animations.</li>
+                        <li>- <span>Stylish and ergonomic:</span> Detachable wrist rest with light diffuser </li>
+                        <li>- <span>Swappable switches:</span> Install your preferred switch type for a unique,
+                            customized
+                            feel.</li>
+                        <li>- <span>ROG switch stabilizer:</span> Specially designed to ensure smooth keystrokes and
+                            stability for longer keys.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <tr id="porductdate3" onclick="show3()" style="text-align: center;">
+                <td>ROG Chakram Mouse</td>
+                <td>Mouse</td>
+                <td>$1,249</td>
+            </tr>
+            <div id="dropdown3" class="dropdown">
+                <div id="dropdownleft" style="float: left;">
+                    <img src="{%static 'images/search3.jpg' %}">
+                </div>
+                <div id="dropdownright" style="float: right;">
+                    <h1>ROG Chakram Mouse</h1>
+                    <ul>
+                        <li>- Industry-leading 16000 dpi, 400 ips optical sensor, plus 1000 Hz polling rate support in
+                            2.4GHz and wired mode.</li>
+                        <li>- Programmable, removable joystick allows personalized settings and superior in-game
+                            control.
+                        </li>
+                        <li>- Fast charge for 15 minutes by wire for up to 12 hours of gameplay, or use Qi technology
+                            for wireless charging.</li>
+                        <li>- DPI On-The-Scroll manipulation for effortless accuracy adjustments</li>
+                        <li>- Pivoted button mechanism offers rapid response and accurate performance with a clean,
+                            tactile feel.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <tr id="porductdate4" onclick="show4()" style="text-align: center;">
+                <td>ROG Huracan G21CX</td>
+                <td>Desktop</td>
+                <td>$11,000</td>
+            </tr>
+            <div id="dropdown4" class="dropdown">
+                <div id="dropdownleft" style="float: left;">
+                    <img src="{%static 'images/search4.jpg' %}">
+                </div>
+                <div id="dropdownright" style="float: right;">
+                    <h1>ROG Huracan G21CX</h1>
+                    <ul>
+                        <li>- Compact 13-liter gaming desktop with cyber-warrior and cyber-punk design elements.</li>
+                        <li>- An aggressive, angular chassis with sharp creases that reflect a battle scars.</li>
+                        <li>- A magnetically-secured cover on its right flank that can be opened to improve heat removal
+                            and overall performance.</li>
+                        <li>- Features air intakes at the front, top and underside of the chassis.</li>
+                        <li>- Increases airflow by 16% and reduces internal temperatures by 15% to help cool critical
+                            components.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <tr id="porductdate5" onclick="show5()" style="text-align: center;">
+                <td>ROG Swift 360Hz</td>
+                <td>Monitor</td>
+                <td>$6,900</td>
+            </tr>
+            <div id="dropdown5" class="dropdown">
+                <div id="dropdownleft" style="float: left;">
+                    <img src="{%static 'images/search5.jpg' %}">
+                </div>
+                <div id="dropdownright" style="float: right;">
+                    <h1>ROG Swift 360Hz</h1>
+                    <ul>
+                        <li>- 24.5-inch FHD (1920 x 1080) fast IPS gaming monitor with 360 Hz refresh rate designed for
+                            professional esports gamers.</li>
+                        <li>- ASUS Fast IPS technology enables a 1 ms response time (GTG) for sharp gaming visuals with
+                            high frame rates.</li>
+                        <li>- NVIDIA® G-SYNC® processor provides smooth, tear-free gaming at refresh rates up to 360 Hz.
+                        </li>
+                        <li>- HDR10 compatible for color and brightness that exceed that of ordinary monitor</li>
+                        <li>- Full HD(1920 X 1080)@120Hz output on PS5 & Xbox Series X/S. </li>
+                    </ul>
+                </div>
+            </div>
+
+            <tr id="porductdate6" onclick="show6()" style="text-align: center;">
+                <td>Razer Blade Pro 17</td>
+                <td>Laptop</td>
+                <td>$23,999</td>
+            </tr>
+            <div id="dropdown6" class="dropdown">
+                <div id="dropdownleft" style="float: left;">
+                    <img src="{%static 'images/search6.webp' %}">
+                </div>
+                <div id="dropdownright" style="float: right;">
+                    <h1>Razer Blade Pro 17</h1>
+                    <ul>
+                        <li>- Array microphone.</li>
+                        <li>- Infrared sensor.</li>
+                        <li>- Built-in webcam.
+                        </li>
+                        <li>- 300 Hz FHD or 120 Hz 4K Touch, 17.3" Display.</li>
+                        <li>- Per-Key RGB powered by Razer Chroma™ N-Key rollover backlit keyboard.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <tr id="porductdate7" onclick="show7()" style="text-align: center;">
+                <td>Chariot Core Chair</td>
+                <td>Chair</td>
+                <td>$4,200</td>
+            </tr>
+            <div id="dropdown7" class="dropdown">
+                <div id="dropdownleft" style="float: left;">
+                    <img src="{%static 'images/search7.jpg' %}">
+                </div>
+                <div id="dropdownright" style="float: right;">
+                    <h1>Chariot Core Chair</h1>
+                    <ul>
+                        <li>- Ergonomic design with high-density foam headrest and memory-foam lumbar cushion for
+                            ultimate comfort.</li>
+                        <li>- 4D-adjustable armrest and up to 145°-recline backrest, plus articulated tilt mechanism to
+                            increase gaming immersion.</li>
+                        <li>- Convenient rear hook infused with ROG’s gaming style and spirit.
+                        </li>
+                        <li>- Constructed from tactile leatherette and high-density, cold-cure foam for superb
+                            durability.</li>
+                        <li>- Superior safety provided by all-steel frame, class 4 gas lift, durable PU casters and
+                            aluminum-alloy, five-star base.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <tr id="porductdate7" onclick="show8()" style="text-align: center;">
+                <td>ROG Centra II</td>
+                <td>Earphone</td>
+                <td>$499</td>
+            </tr>
+            <div id="dropdown8" class="dropdown">
+                <div id="dropdownleft" style="float: left;">
+                    <img src="{%static 'images/search8.jpg' %}">
+                </div>
+                <div id="dropdownright" style="float: right;">
+                    <h1>ROG Centra II</h1>
+                    <ul>
+                        <li>- Liquid Silicone Rubber ASUS Essence Drivers.</li>
+                        <li>- Concealed Microphone for Clear Voice Communication.</li>
+                        <li>- Quick Control at Your Fingertips.</li>
+                        <li>- Perfectly Comfortable.</li>
+                        <li>- Lightweight and Durable.</li>
+                    </ul>
+                </div>
+            </div>
+        </table>
+    </section>
+</body>
+<script>
+    function myFunction() {
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("mysearch");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("productTable");
+        tr = table.getElementsByTagName("tr");
+
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+
+
+    function show() {
+        if (document.getElementById('dropdown').style.display == "none") {
+            document.getElementById('dropdown').style.display = "block"
+        } else {
+            document.getElementById('dropdown').style.display = "none"
+        }
+    }
+    function show2() {
+        if (document.getElementById('dropdown2').style.display == "none") {
+            document.getElementById('dropdown2').style.display = "block"
+        } else {
+            document.getElementById('dropdown2').style.display = "none"
+        }
+    }
+    function show3() {
+        if (document.getElementById('dropdown3').style.display == "none") {
+            document.getElementById('dropdown3').style.display = "block"
+        } else {
+            document.getElementById('dropdown3').style.display = "none"
+        }
+    }
+    function show4() {
+        if (document.getElementById('dropdown4').style.display == "none") {
+            document.getElementById('dropdown4').style.display = "block"
+        } else {
+            document.getElementById('dropdown4').style.display = "none"
+        }
+    }
+    function show5() {
+        if (document.getElementById('dropdown5').style.display == "none") {
+            document.getElementById('dropdown5').style.display = "block"
+        } else {
+            document.getElementById('dropdown5').style.display = "none"
+        }
+    }
+    function show6() {
+        if (document.getElementById('dropdown6').style.display == "none") {
+            document.getElementById('dropdown6').style.display = "block"
+        } else {
+            document.getElementById('dropdown6').style.display = "none"
+        }
+    }
+    function show7() {
+        if (document.getElementById('dropdown7').style.display == "none") {
+            document.getElementById('dropdown7').style.display = "block"
+        } else {
+            document.getElementById('dropdown7').style.display = "none"
+        }
+    }
+    function show8() {
+        if (document.getElementById('dropdown8').style.display == "none") {
+            document.getElementById('dropdown8').style.display = "block"
+        } else {
+            document.getElementById('dropdown8').style.display = "none"
+        }
+    }
+</script>
+
+</html>

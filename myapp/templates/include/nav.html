@@ -1,0 +1,60 @@
+{% load static %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+<nav class="navbar navbar-expand-lg navbar navbar-custom">
+    <a class="navbar-brand icon" href="/home/"><img src="{% static 'images/icon.png' %}"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="fa-solid fa-align-justify"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/home/">Home <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/products/">Products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">News</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Support</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/create/">Comments</a>
+            </li>
+        </ul>
+
+        <form class="form-inline my-2 my-lg-0"></form>
+        <li class="nav-item"><a href="/search" class="nav-link"><i class="fa-solid fa-magnifying-glass"
+                    style="color: white;"></i></a></li>
+        <li class="nav-item dropdown User">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fa-regular fa-user"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/list/">View Comments</a>
+                <a class="dropdown-item" href="#">Settings</a>
+                <div class="dropdown-divider"></div>
+                {% if request.user.is_authenticated %}
+                <p style="margin-left: 30px; font-weight: bold;">Hi, {{ request.user }} {% if user.is_superuser %}
+                    <span style="color: red;;">(Admin)</span>
+                    {% endif %}
+                </p>
+                <a class="dropdown-item" href="/logout/" style="color: red;">Log out</a>
+                {% else %}
+                <a class="dropdown-item" href="/login/" style="color: red;">Log in</a>
+                <a class="dropdown-item" href="/signup/" style="color: red;">Register</a>
+                {% endif %}
+            </div>
+        </li>
+        </form>
+
+    </div>
+</nav>

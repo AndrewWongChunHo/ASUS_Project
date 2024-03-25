@@ -1,0 +1,30 @@
+{% include 'include/css.html' %}
+{% include 'include/js.html' %}
+{% include 'include/nav.html' %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+{% block content %}
+<section class="section list">
+    <div class="commentContainer">
+        {% if object_list %}
+        {% for post in object_list %}
+        <div class="comment">
+            <h5 class="comment-id" style="font-weight: bold;">Comment by {{ request.user }}: </h5>
+            <h6 class="comment-text">- {{ post.content }} -</h6>
+            <p class="comment-update">Last updated : {{ post.updated }}
+                {% if request.user.is_authenticated %}
+                <a href='{% url "update" post.id %}'> EDIT</a>
+                {% if user.is_superuser %}
+                <a href='{% url "delete" post.id %}'> DELETE </a>
+                {% endif %}
+                {% endif %}
+            </p>
+
+        </div>
+        {% endfor %}
+        {% endif %}
+    </div>
+</section>
+{% include 'include/footer.html' %}
+{% endblock content %}

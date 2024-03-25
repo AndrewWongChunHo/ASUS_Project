@@ -1,0 +1,187 @@
+{% include 'include/css.html' %}
+{% include 'include/js.html' %}
+{% include 'include/nav.html' %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+<link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+<link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+<script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FT - Republic of Gamers</title>
+</head>
+
+<body>
+    <section class="section header">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100"
+                        src="https://dlcdnwebimgs.asus.com/gain/D1CAFB04-8408-4828-8F7B-4324958D8CE9/fwebp"
+                        alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100"
+                        src="https://dlcdnwebimgs.asus.com/gain/CE79138D-25A9-4E44-AF72-986D677D2A42/fwebp"
+                        alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100"
+                        src="https://dlcdnwebimgs.asus.com/gain/385AE989-2371-4EA1-B17D-39E58BC1731B/fwebp"
+                        alt="Third slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+
+    <div class="text-center exploreText">
+        <h2>Explore Our Products</h2>
+    </div>
+
+    <section class="section product">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <!-- Slider 1 -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-2">
+                            <img class="d-block w-100" style="width: 200px; height: 200px;"
+                                src="https://www.asus.com/media/global/products/IIZeGEHnefPFHfSe/P_setting_fff_1_90_end_500.png"
+                                alt="First slide">
+                            <h4 class="text-center">Computer</h4>
+                        </div>
+                        <div class="col-2">
+                            <img class="d-block w-100" style="width: 200px; height: 200px;"
+                                src="https://media.karousell.com/media/photos/products/2021/12/22/_asus_rog_gaming_mice_1640147440_510182de.jpg"
+                                alt="First slide">
+                            <h4 class="text-center">Mouse</h4>
+                        </div>
+                        <div class="col-2">
+                            <img class="d-block w-100" style="width: 200px; height: 200px;"
+                                src="https://m.media-amazon.com/images/I/91DbiglR1qL._SX425_.jpg" alt="First slide">
+                            <h4 class="text-center">Keyboard</h4>
+                        </div>
+                        <div class="col-2">
+                            <img class="d-block w-100" style="width: 200px; height: 200px;"
+                                src="https://images-cn.ssl-images-amazon.cn/images/I/711CR7IFqEL._AC_SL1500_.jpg"
+                                alt="First slide">
+                            <h4 class="text-center">Monitor</h4>
+                        </div>
+                        <div class="col-2">
+                            <img class="d-block w-100" style="width: 200px; height: 200px;"
+                                src="https://www.tradeinn.com/f/13868/138689555/asus-rog-strix-z690-e-gaming-wifi-motherboard.jpg"
+                                alt="First slide">
+                            <h4 class="text-center">Gaming Wifi</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slider 2 -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-2">
+                            <img class="d-block w-100" style="width: 200px; height: 200px;"
+                                src="https://i.expansys.net/img/b/325071/asus-rog-theta-71-wired-gaming-headphones.jpg"
+                                alt="Second slide">
+                            <h4 class="text-center">Headphone</h4>
+                        </div>
+                        <div class="col-2">
+                            <img class="d-block w-100" style="width: 200px; height: 200px;"
+                                src="https://www.fortress.com.hk/medias/12281250-12281250.jpg?context=bWFzdGVyfGZyb250em9vbXwxMTYyMTl8aW1hZ2UvanBlZ3xmcm9udHpvb20vaGQ4L2gwZi85Njk2Mjk5MDU3MTgyLmpwZ3wwY2YyN2UzODM3Y2U1OTEyNTE5MDQ4YjFmNDRmZDkzOTBhMGUxYmFhMmU4MDg2MGNjY2FlNmUxN2RjYWQ3NDk5"
+                                alt="Second slide">
+                            <h4 class="text-center">Phones</h4>
+                        </div>
+                        <div class="col-2">
+                            <img class="d-block w-100" style="width: 200px; height: 200px;"
+                                src="https://www.tradeinn.com/f/13823/138232076/asus-rog-z11-argb-tower-case.jpg"
+                                alt="Second slide">
+                            <h4 class="text-center">Cases</h4>
+                        </div>
+                        <div class="col-2">
+                            <img class="d-block w-100" style="width: 200px; height: 200px;"
+                                src="https://www.tradeinn.com/f/13743/137431895/asus-rog-strix-geforce-rtx-2070-super-gaming-8gb-gddr6-graphic-card.jpg"
+                                alt="Second slide">
+                            <h4 class="text-center">Graphic Card</h4>
+                        </div>
+                        <div class="col-2">
+                            <img class="d-block w-100" style="width: 200px; height: 200px;"
+                                src="https://www.price.com.hk/space/product/508000/508774_p2th2g_0.png"
+                                alt="Second slide">
+                            <h4 class="text-center">Coolers</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+        </div>
+    </section>
+
+    <section class=" section product2">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="https://overclock3d.net/gfx/articles/2018/01/09144145763l.jpg"
+                        alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100"
+                        src="https://www.openshop.com.hk/upload/movie/o_1e5a0jvtj10n812mi1g2vapj1ps2e.jpg"
+                        alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100"
+                        src="https://www.notebookcheck-cn.com/fileadmin/Notebooks/Asus/ROG_Strix_GL553VD-DS71/Stock_photo_8.jpg"
+                        alt="Third slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- banner -->
+    <section class="section banner">
+        <div class="banner-container" style="align-items: center;">
+            <div class="bannerText" data-splitting>Unprecedented Experience.</div>
+            <div class="line"></div>
+        </div>
+        <div class="button button-1"><a href="/products">Explore</a></div>
+    </section>
+
+    <!-- footer -->
+    {% include 'include/footer.html' %}
+    <script> Splitting(); </script>
+</body>
+
+</html>

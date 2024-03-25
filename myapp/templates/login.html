@@ -1,0 +1,50 @@
+{% include 'include/css.html' %}
+{% include 'include/js.html' %}
+{% include 'include/nav.html' %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    {% load widget_tweaks %}
+    {% block content %}
+    <section class="formContainer login">
+        <div class="center">
+            <h1>Login</h1>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.non_fields_errors }}
+                <div class="textWrapper">
+                    <h6>Username</h6>
+                    <label for="{{ form.username.id_for_label }}"></label>
+                    {{ form.username | add_class:"form-control" }}
+                    {{ form.username.errors }}
+                </div>
+                <div class="textWrapper">
+                    <h6>Password</h6>
+                    <label for="{{ form.password.id_for_label }}"></label>
+                    {{ form.password | add_class:"form-control" }}
+                    {{ form.password.errors }}
+                </div>
+                <div class="forgetpassword">Forgot Password?</div>
+                <input type="submit" class="signup_button" value="Login">
+                <div class="signup-link">
+                    Not a member? <a href="/signup/">Signup</a>
+                </div>
+            </form>
+            {% endblock content %}
+    </section>
+    {% include 'include/footer.html' %}
+</body>
+
+
+</html>

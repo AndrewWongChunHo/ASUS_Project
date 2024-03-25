@@ -1,0 +1,549 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+	text-decoration: none;
+}
+
+html{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Nav Bar */
+li {
+    list-style: none;
+}
+
+#navbarSupportedContent li {
+    font-size: 20px;
+}
+
+.User {
+    margin-right: 120px;
+}
+
+.icon {
+    margin-left: 120px;
+}
+
+.index_p1 {
+    padding: 20px;
+    padding-top: 100px;
+}
+
+.navbar .navbar-nav {
+    margin: 0 auto;
+}
+
+.dropdown-toggle{
+    color: black;
+}
+
+.text-center h2{
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.navbar-custom{
+    background-color: black;
+}
+
+.nav-item{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+} 
+
+.nav-item a{
+    color: white;
+    margin: 10px;
+}
+
+.nav-item a:hover{
+    color: red;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar-toggler-icon{
+    color: white;
+    transform: scale(1.5);
+}
+
+
+.dropdown-menu a{
+    color: black;
+}
+
+.dropdown-toggle{
+    color: black;
+}
+
+
+/* Categories */
+
+.product {
+    width: 100%;
+    height: 40vh;
+    margin-left: 110px;
+    margin-top: 20px;
+}
+
+.product2{
+    display: none;
+}
+
+/* banner */
+.banner{
+    width: 100%;
+    height: 70vh;
+    background-image: url(https://www.asus.com/WebsitesBanner/HKen/banners/nv5gui1couj4fprr/nv5gui1couj4fprr-0_0_desktop_1X.jpg);
+    background-size: cover;
+}
+
+
+.bannerText{
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    margin-left: 10%;
+    margin-top: 9%;
+    font-weight: 500;
+}
+
+.bannerText .char{
+    transition: color 0.5s linear;
+    transition-delay: calc( 0.04s * var(--char-index) );
+}
+
+.bannerText:hover .char{
+    color: #00d7c3;
+}
+
+.line{
+    position: absolute;
+    width: 350px;
+    height: 10px;
+    background-color: rgba(226,226,226);
+    margin-left: 17%;
+    margin-top: 14%;
+    font-weight: bold;
+}
+
+/* button */
+.button {
+    width: 170px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-left: 22%;
+    margin-top: 18%;
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  .button a{
+      text-decoration: none;
+      color: #00d7c3;
+  }
+
+  .button-1 {
+    background-color: transparent;
+    border: 3px solid #00d7c3;
+    border-radius: 20px;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    color: #00d7c3;
+  }
+
+  .button-1:hover {
+    box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+    border: 3px solid #00d7c3;
+  }
+
+/* Footer */
+.bg-custom{
+    background-color: black
+}
+
+.list-unstyled a{
+    color: white;
+}
+
+/* Login */
+.formContainer{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 85vh;
+    overflow: hidden;
+}
+
+.login{
+    background-image: url(https://wallpaperbat.com/img/371653-colorful-neon-city-4k-hd-artist-4k-wallpaper-image.jpg);
+    background-size: cover;
+}
+
+.center{
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+}
+
+.center h1{
+    text-align: center;
+    margin-top: 10px;
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid #394259;
+}
+
+.center form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form h6{
+    margin-top: 20px;
+}
+
+form .textWrapper{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+
+.textWrapper input{
+    width: 100%;
+    padding: 0 5px;
+    height: 30px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.forgetpassword{
+    margin: -5px 0 20px 5px;
+    color: #a6a6a6;
+    cursor: pointer;
+}
+
+.forgetpassword:hover{
+    text-decoration: underline;
+}
+
+.signup_button{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: #2691d9;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    cursor: pointer;
+    outline: none;
+    transition: .5s;
+}
+
+.signup_button:hover{
+    border-color: #2691d9;
+}
+
+.signup-link{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+}
+
+.signup-link a{
+    color: #2691d9;
+}
+
+.signup-link a:hover{
+    text-decoration: underline;
+}
+
+/* Register */
+
+form .textWrapper_register{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 10px 0;
+}
+
+.textWrapper_register input{
+    width: 100%;
+    padding: 0 5px;
+    height: 20px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.login-link{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+}
+
+.login-link a{
+    color: #2691d9;
+}
+
+.login-link a:hover{
+    text-decoration: underline;
+}
+
+.register{
+    background-image: url(https://wallpaperaccess.com/full/104879.jpg);
+    background-size: cover;
+}
+
+
+
+/* list view */
+.list{
+    background-image: url(https://imgix.bustle.com/uploads/shutterstock/2020/12/4/a03978c4-abe8-4bdc-99df-62516fff6a11-shutterstock-1771319117.jpg?w=2000&h=1090&fit=crop&crop=focalpoint&auto=format%2Ccompress&fp-x=0.488&fp-y=0.7244444444444444&blend=000000&blendAlpha=45&blendMode=normal);
+    background-size: cover;
+    width: 100%;
+    height: 150vh;
+}
+
+.commentContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+
+.comment{
+    width: 650px;
+    height: 130px;
+    margin-left: 50px;
+    margin-top: 30px;
+    background: white;
+    padding: 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 9px 11px 5px rgba(0,0,0,0.1);
+    color: black;
+}
+
+/* Create View */
+.create{
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://wallpaperaccess.com/full/5154287.jpg);
+    background-size: cover;
+}
+
+.form-container{
+    position: absolute;
+    width: 500px;
+    height: 450px;
+    background-color: white;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+}
+
+form .create-textWrapper{
+    margin: 20px 0;
+    margin-left: 80px;
+}
+
+.fieldWrapper{
+    position: relative;
+    margin-left: 50px;
+}
+
+.btn-container{
+    position: absolute;
+    top: 80%;
+    left: 18%;
+}
+
+.create-btn, .cancel-btn, .edit-btn{
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+    left: 27%;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+    width: 90px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.create-btn{
+    background-color: rgb(61, 33, 183);
+}
+
+.create-btn:hover{
+    background-color: rgb(85, 163, 227);
+    transition: 0.3s ease-in-out;
+}
+
+
+.cancel-btn{
+    background-color: black;
+}
+
+.cancel-btn:hover{
+    background-color: rgb(90, 88, 90);
+    transition: 0.3s ease-in-out;
+}
+
+.btn-container a{
+    color: white;
+}
+
+/* Update View */
+.update{
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://giffiles.alphacoders.com/211/211748.gif);
+    background-size: cover;
+}
+
+form .update-textWrapper{
+    margin: 20px 0;
+    margin-left: 87px;
+}
+
+.edit-btn{
+    background-color: #bf3865;
+}
+
+.edit-btn:hover{
+    background-color: #e97fa3;
+    transition: 0.3s ease-in-out;
+}
+
+/* Delete View */
+.delete{
+    width: 100%;
+    height: 80vh;
+    background-image: url(https://giffiles.alphacoders.com/211/211748.gif);
+}
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+}
+
+.delete-container{
+    position: relative;
+    width: 700px;
+    height: 200px;
+    border-radius: 25px;
+    background-color: white;
+    margin-top: 170px;
+    white-space: nowrap;
+}
+
+.delete-text{
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 60px;
+}
+
+.button-container{
+    margin-top: 30px;
+    margin-left: 160px;
+}
+
+.cancel-list-btn, .delete-btn {
+    width: 170px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 12%;
+    margin-left: 10px;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 20px;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+    
+    }
+
+    .delete-btn{
+        background-color: #00d7c3;
+        border: none;
+        color: #333;
+        transition: 0.3s ease-in-out;
+    }
+
+    .delete-btn:hover {
+        background-color: #0ee2cc;
+        transform: scale(1.5);
+    }
+
+    .cancel-list-btn{
+        background-color: red;
+        border: none;
+        transition: 0.3s ease-in-out;
+    }
+
+    .cancel-list-btn a{
+        text-decoration: none;
+        color: #fff
+    }
+
+    .cancel-list-btn:hover{
+        transform: scale(1.5);
+    }
+
+
+
+/* Responsive design */
+@media screen and (max-width:768px){
+
+    .navbar-brand{
+        margin-left: 50px;
+        transform: scale(1.1);
+    }
+
+
+  .line{
+      margin-top: 200px;
+      margin-left: 70px;
+  }
+
+  .button-1{
+      margin-top: 250px;
+      margin-left: 70px;
+  }
+
+  .product{
+      display: none;
+  }
+
+  .product2{
+      display: block;
+  }
+
+}
+
+
+
+
+
+
